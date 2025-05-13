@@ -1,0 +1,143 @@
+.subs {
+  margin-top: 5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  
+}
+
+.sub {
+  border: solid 1px #c5c5c5;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 300px;
+  background-color: #353535;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+  
+  
+}
+
+.sub:hover {
+  scale: 1.05;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px);
+}
+
+.sub h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #e4e2e2; 
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.sub h3 {
+  font-size: 1.2rem;
+  color: #0095ff; 
+  margin-bottom: 0.5rem;
+}
+
+.sub ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.sub ul li {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Note: The concept for the below code for the button animation is taken from Uiverse.io by Gaurav-WebDev, My code resumes from @media.*/ 
+.subbut {
+  margin-top:10px;
+  padding: 12px 20px;
+  width: 150px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #fdfdfd;
+  transition: all 0.5s ease-in-out;
+}
+
+.subbutt.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #ff5252;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.subbut:hover {
+  box-shadow: 1px 1px 200px #723b3b;
+  background-color:#ff5252;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+
+
+@media (max-width: 768px) {
+
+  .subs {
+    gap: 2rem;
+  }
+
+  .sub {
+    
+    padding: 1.5rem;
+  }
+
+  .sub h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subs {
+    gap: 1rem;
+  }
+
+  .sub {
+    width: 100%;
+  }
+}
