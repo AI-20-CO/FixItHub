@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/subscription.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <title>FixItHub</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+      <button class="close-btn" onclick="closeSidebar()">&times;</button>
+      
+        <a href="account.html">Account</a>
+        <a href="vouchers.html">Vouchers</a>
+        <a href="track.html">Track Your Order</a>
+        <a href="customer-care.html">Customer Care</a>
+        <div class="points">
+          <p>380 PTS</p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <div class="header-div">
+          <button class="toggle-btn" onclick="openSidebar()">&#9776;</button>
+          <a href = "index.html"><img src="./assets/images/repair-tools.png
+            " alt="" /></a>
+
+            <a class = "link" href = "index.html"><h1>FixItHub</h1></a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="subscription.html">Subscriptions</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="subs">
+        <div class="sub">
+          <h2>Rigid Plan</h2>
+          <p class="price">$50/month</p>
+          <p class="description">Includes advanced features for businesses.</p>
+
+          <h3>Advantages:</h3>
+          <ul>
+            <li>Advanced tools for productivity</li>
+            <li>Priority customer support</li>
+            <li>High data limits</li>
+          </ul>
+
+          <h3>Disadvantages:</h3>
+          <ul>
+            <li>Higher cost</li>
+            <li>Long-term commitment</li>
+          </ul>
+
+          <button class = "subbut">Subscribe</button>
+        </div>
+
+        <div class="sub">
+          <h2>Soft Plan</h2>
+          <p class="price">$30/month</p>
+          <p class="description">
+            A budget-friendly plan with essential features.
+          </p>
+
+          <h3>Advantages:</h3>
+          <ul>
+            <li>Lower cost</li>
+            <li>Easy to cancel anytime</li>
+            <li>Perfect for individuals or small projects</li>
+          </ul>
+
+          <h3>Disadvantages:</h3>
+          <ul>
+            <li>Limited features</li>
+            <li>Basic customer support</li>
+          </ul>
+
+          <button class="subbut">Subscribe</button>
+        </div>
+      </div>
+    
+    </div>
+    <script src="/index.js"></script>
+    
+  </body>
+
+</html>

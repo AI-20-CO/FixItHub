@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/cus.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <title>FixItHub</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+      <button class="close-btn" onclick="closeSidebar()">&times;</button>
+ 
+        <a href="account.html">Account</a>
+        <a href="vouchers.html">Vouchers</a>
+        <a href="track.html">Track Your Order</a>
+        <a href="customer-care.html">Customer Care</a>
+    
+      <div class="points">
+        <p>380 PTS</p>
+    </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <div class="header-div">
+          <button class="toggle-btn" onclick="openSidebar()">&#9776;</button>
+          <a href = "index.html"><img src="./assets/images/repair-tools.png
+            " alt="" /></a>
+            <a class = "link" href = "index.html"><h1>FixItHub</h1></a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="subscription.html">Subscriptions</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container">
+        <h1>Customer Care</h1>
+        <div class="contact-options">
+          <div class="card">
+            <i class="fas fa-phone"></i>
+            <h3>Call Us</h3>
+            <p>+1 234 567 890</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Us</h3>
+            <p>support@fixithub.com</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Visit Us</h3>
+            <p>123 FixItHub Street, Taylors</p>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <h2>Submit a Query</h2>
+          <form>
+            <label class = "input_titles" for="name">Name</label>
+            <input 
+              style = "background-color:rgb(255, 255, 255);"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            <label class = "input_titles" for="email">Email</label>
+            <input class = "textboxes"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <label class = "input_titles" for="message">Message</label>
+            <textarea class = "textboxes"
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </form>
+          <button class="customerbutton" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

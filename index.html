@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/global.css" />
+    <title>FixItHub</title>
+  </head>
+  
+  <body>
+    <div class="sidebar" id="mySidebar">
+      <button class="close-btn" onclick="closeSidebar()">&times;</button>
+      
+        <a href="account.html">Account</a>
+        <a href="vouchers.html">Vouchers</a>
+        <a href="track.html">Track Your Order</a>
+        <a href="customer-care.html">Customer Care</a>
+        <div class="points">
+          <p>380 PTS</p>
+      </div>
+    </div>
+
+
+    <div class="main-content">
+      <header>
+        <div class="header-div">
+          <button class="toggle-btn" onclick="openSidebar()">&#9776;</button>
+          <a href = "index.html"><img src="./assets/images/repair-tools.png
+            " alt="" /></a>
+
+            <a class = "link" href = "index.html"><h1>FixItHub</h1></a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="subscription.html">Subscriptions</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="slider">
+          <div class="slides">
+            <div class="slide"><img src="assets/images/image 1.jpg" alt="Image 1" /></div>
+            <div class="slide"><img src="assets/images/image2.jpg" alt="Image 2" /></div>
+            <div class="slide"><img src="assets/images/image3.jpg" alt="Image 3" /></div>
+          </div>
+          <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+          <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+
+        <div class="content">
+          <section class="services">
+            <h2>Our Services</h2>
+            <ul class="services-list">
+              <li onclick="handleServiceClick('home-repair')">
+                <img
+                  src="https://i.pinimg.com/474x/da/27/47/da2747b9b62aad90a665ae54db45e471.jpg"
+                  alt="Home Repair"
+                />
+                <h3>Home Repair</h3>
+                <p>
+                  Expert repair services for plumbing, electrical, and more.
+                </p>
+                <span class="eco-tag eco-friendly">Eco-Friendly</span>
+                <!-- Eco-Friendly tag -->
+              </li>
+              <li onclick="handleServiceClick('appliance-maintenance')">
+                <img
+                  src="https://i.pinimg.com/474x/7c/74/6c/7c746c8d47ce3005d621b9a66f338198.jpg"
+                  alt="Appliance Maintenance"
+                />
+                <h3>Appliance Maintenance</h3>
+                <p>
+                  Keep your appliances running smoothly with regular checkups.
+                </p>
+                <span class="eco-tag not-eco-friendly">Not Eco-Friendly</span>
+                <!-- Not Eco-Friendly tag -->
+              </li>
+              <li onclick="handleServiceClick('cleaning-services')">
+                <img
+                  src="https://i.pinimg.com/474x/41/99/61/4199610dcb4d650cb1f53c55bfa91dae.jpg"
+                  alt="Cleaning Services"
+                />
+                <h3>Cleaning Services</h3>
+                <p>
+                  Professional cleaning for homes and offices, customized to
+                  your needs.
+                </p>
+                <span class="eco-tag eco-friendly">Eco-Friendly</span>
+                <!-- Eco-Friendly tag -->
+              </li>
+              <li onclick="handleServiceClick('gardening-landscaping')">
+                <img
+                  src="https://i.pinimg.com/474x/c4/51/e7/c451e7ca8d8c5850285aa9e71e4a74f2.jpg"
+                  alt="Gardening & Landscaping"
+                />
+                <h3>Gardening & Landscaping</h3>
+                <p>
+                  Beautify your outdoor spaces with expert gardening services.
+                </p>
+                <span class="eco-tag eco-friendly">Eco-Friendly</span>
+                <!-- Eco-Friendly tag -->
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div id="serviceModal" class="modal">
+          <div class="modal-content">
+            <h3 style = "padding-right: 220px;">
+              Home Repair
+            </h3>
+            <div style = "padding-right: 175px;">
+              Compressor fan motor
+              <br>
+             
+            </div>
+            <div class="slider_mod"> 
+              <div class="slides_mod">
+                <div class="slide_mod"><img src="assets/images/home-cleaning.jpg" alt="Image 1" /></div>
+                <div class="slide_mod"><img src="assets/images/air-conditioner-repair.jpg" alt="Image 2" /></div>
+                <div class="slide_mod"><img src="assets/images/air-conditioner-repair-service-ad-template-design-a69eed1087a40e49cb6517fc0245d23c_screen.jpg" alt="Image 3" /></div>
+              </div>
+              <button class="prev_mod" onclick="plusSlidesMod(-1)">&#10094;</button>
+              <button class="next_mod" onclick="plusSlidesMod(1)">&#10095;</button>
+            </div>
+            <h5>$500</h5>
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="serviceTitle"></h2>
+            <p>Would you like to fix it now or schedule it for later?</p>
+            <button onclick="fixItNow()">Fix It Now</button>
+            <button onclick="scheduleLater()">Schedule Later</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/index.js">
+
+    </script>
+  </body>
+</html>

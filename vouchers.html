@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/voucher.css">
+    <link rel="stylesheet" href="css/global.css" />
+    <title>FixItHub</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+      <button class="close-btn" onclick="closeSidebar()">&times;</button>
+      <div>
+        <a href="account.html">Account</a>
+        <a href="vouchers.html">Vouchers</a>
+        <a href="track.html">Track Your Order</a>
+        <a href="customer-care.html">Customer Care</a>
+      </div>
+      <div class="points">
+        <p>380 PTS</p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <div class="header-div">
+          <button class="toggle-btn" onclick="openSidebar()">&#9776;</button>
+          <a href = "index.html"><img src="./assets/images/repair-tools.png
+            " alt="" /></a>
+
+            <a class = "link" href = "index.html"><h1>FixItHub</h1></a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="subscription.html">Subscriptions</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <h1 class="voucher">VOUCHERS</h1>
+
+      <div class="voucher-container">
+
+        <div id = "voucher1" class="voucher-box">
+          <h2>10% Off Cleaning Services</h2>
+          <p>Save 10% on your next cleaning service. Keep your home spotless while enjoying great savings!</p>
+          <button onclick="redeem('voucher1')">Redeem</button>
+        </div>
+      
+        <div id = "voucher2" class="voucher-box">
+          <h2>Free Air-Conditioner Checkup</h2>
+          <p>Get a complimentary air-conditioner inspection to ensure your system is running smoothly.</p>
+          <button onclick="redeem('voucher2')">Redeem</button>
+        </div>
+
+        <div id = "voucher3" class="voucher-box">
+          <h2>Free Pickup for Recycling</h2>
+          <p>Enjoy free pickup for your recyclable items. Make a difference for the environment without extra cost.</p>
+          <button onclick="redeem('voucher3')">Redeem</button>
+        </div>
+
+        <div id = "voucher4" class="voucher-box">
+          <h2>$20 Discount on Repairs</h2>
+          <p>Redeem this voucher to get $20 off any repair service. Affordable fixes made simple!</p>
+          <button onclick="redeem('voucher4')">Redeem</button>
+        </div>
+
+      </div>
+    
+   
+
+    <script>
+
+
+
+      // Function to handle modal
+      function openModal(title, description, cost, ecoTag) {
+        document.getElementById("serviceTitle").innerText = title;
+        document.getElementById("serviceDescription").innerText = description;
+        document.getElementById("serviceCost").innerText = cost;
+        document.getElementById("ecoTag").innerText =
+          ecoTag === "eco-friendly" ? "Eco-Friendly" : "Not Eco-Friendly";
+        document.getElementById("serviceModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("serviceModal").style.display = "none";
+      }
+
+      function fixItNow() {
+        // Handle 'Fix It Now' action
+        alert("Service will be fixed now.");
+      }
+
+      function scheduleLater() {
+        // Handle 'Schedule Later' action
+        alert("Service has been scheduled.");
+      }
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

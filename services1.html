@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <title>FixItHub</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+      <button class="close-btn" onclick="closeSidebar()">&times;</button>
+
+        <a href="account.html">Account</a>
+        <a href="vouchers.html">Vouchers</a>
+        <a href="track.html">Track Your Order</a>
+        <a href="customer-care.html">Customer Care</a>
+        <div class="points">
+          <p>380 PTS</p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <div class="header-div">
+          <button class="toggle-btn" onclick="openSidebar()">&#9776;</button>
+          <a href = "index.html"><img src="./assets/images/repair-tools.png
+            " alt="" /></a>
+            <a class = "link" href = "index.html"><h1>FixItHub</h1></a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="subscription.html">Subscriptions</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="Search for services..."
+          onkeyup="filterServices()"
+        />
+      </div>
+
+      <!-- Services -->
+      <section class="services-container" id="servicesContainer">
+        <!-- Example service cards -->
+        <div
+          class="service-card"
+          data-title="Home Repair"
+          onclick="openModal('Home Repair', 'Expert repair services for plumbing, electrical, and more.', '$500', 'eco-friendly')"
+        >
+          <img
+            src="https://i.pinimg.com/474x/da/27/47/da2747b9b62aad90a665ae54db45e471.jpg"
+            alt="Home Repair"
+            class="service-image"
+          />
+          <h3>Home Repair</h3>
+          <p>Expert repair services for plumbing, electrical, and more.</p>
+          <p class="service-cost">$500</p>
+          <span class="eco-tag eco-friendly">Eco-Friendly</span>
+        </div>
+        <div
+          class="service-card"
+          data-title="Appliance Maintenance"
+          onclick="openModal('Appliance Maintenance', 'Keep your appliances running smoothly with regular checkups.', '$300', 'not-eco-friendly')"
+        >
+          <img
+            src="https://i.pinimg.com/474x/7c/74/6c/7c746c8d47ce3005d621b9a66f338198.jpg"
+            alt="Appliance Maintenance"
+            class="service-image"
+          />
+          <h3>Appliance Maintenance</h3>
+          <p>Keep your appliances running smoothly with regular checkups.</p>
+          <p class="service-cost">$300</p>
+          <span class="eco-tag not-eco-friendly">Not Eco-Friendly</span>
+        </div>
+        <div
+          class="service-card"
+          data-title="Cleaning Services"
+          onclick="openModal('Cleaning Services', 'Professional cleaning for homes and offices, customized to your needs.', '$200', 'eco-friendly')"
+        >
+          <img
+            src="https://i.pinimg.com/474x/41/99/61/4199610dcb4d650cb1f53c55bfa91dae.jpg"
+            alt="Cleaning Services"
+            class="service-image"
+          />
+          <h3>Cleaning Services</h3>
+          <p>
+            Professional cleaning for homes and offices, customized to your
+            needs.
+          </p>
+          <p class="service-cost">$200</p>
+          <span class="eco-tag eco-friendly">Eco-Friendly</span>
+        </div>
+        <div
+          class="service-card"
+          data-title="Gardening & Landscaping"
+          onclick="openModal('Gardening & Landscaping', 'Beautify your outdoor spaces with expert gardening services.', '$350', 'eco-friendly')"
+        >
+          <img
+            src="https://i.pinimg.com/474x/c4/51/e7/c451e7ca8d8c5850285aa9e71e4a74f2.jpg"
+            alt="Gardening & Landscaping"
+            class="service-image"
+          />
+          <h3>Gardening & Landscaping</h3>
+          <p>Beautify your outdoor spaces with expert gardening services.</p>
+          <p class="service-cost">$350</p>
+          <span class="eco-tag eco-friendly">Eco-Friendly</span>
+        </div>
+        <!-- More service cards... -->
+        <div
+          class="service-card"
+          data-title="Window Installation"
+          onclick="openModal('Window Installation')"
+        >
+          <img
+            src="https://i.pinimg.com/474x/12/06/65/120665c9e7a16f3fa0b5d18d6e7e9764.jpg"
+            alt="Window Installation"
+            class="service-image"
+          />
+          <h3>Window Installation</h3>
+          <p>
+            Efficient window installation for better insulation and aesthetics.
+          </p>
+          <p class="service-cost">$700</p>
+          <span class="eco-tag eco-friendly">Eco-Friendly</span>
+        </div>
+
+        <div
+          class="service-card"
+          data-title="Fencing Services"
+          onclick="openModal('Fencing Services')"
+        >
+          <img
+            src="https://i.pinimg.com/736x/aa/8b/6f/aa8b6fce122c5246e12ca66374e98aab.jpg"
+            alt="Fencing Services"
+            class="service-image"
+          />
+          <h3>Fencing Services</h3>
+          <p>
+            Install and repair fences to enhance your property's security and
+            privacy.
+          </p>
+          <p class="service-cost">$500</p>
+          <span class="eco-tag not-eco-friendly">Not Eco-Friendly</span>
+        </div>
+
+        <div
+          class="service-card"
+          data-title="Solar Panel Installation"
+          onclick="openModal('Solar Panel Installation')"
+        >
+          <img
+            src="https://i.pinimg.com/736x/26/f4/f3/26f4f37cf2600da221333af7d9f0e5a5.jpg"
+            alt="Solar Panel Installation"
+            class="service-image"
+          />
+          <h3>Solar Panel Installation</h3>
+          <p>Install solar panels to save energy and reduce utility bills.</p>
+          <p class="service-cost">$2,000</p>
+          <span class="eco-tag eco-friendly">Eco-Friendly</span>
+        </div>
+
+        <div
+          class="service-card"
+          data-title="Garage Door Repair"
+          onclick="openModal('Garage Door Repair')"
+        >
+          <img
+            src="https://i.pinimg.com/474x/12/d1/cb/12d1cb3e19e2dd1b55284f3d00db1a17.jpg"
+            alt="Garage Door Repair"
+            class="service-image"
+          />
+          <h3>Garage Door Repair</h3>
+          <p>
+            Reliable repairs for all types of garage doors, ensuring safety and
+            functionality.
+          </p>
+          <p class="service-cost">$250</p>
+          <span class="eco-tag not-eco-friendly">Not Eco-Friendly</span>
+        </div>
+
+        <div
+          class="service-card"
+          data-title="Driveway Paving"
+          onclick="openModal('Driveway Paving')"
+        >
+          <img
+            src="https://i.pinimg.com/474x/88/c0/a3/88c0a30ace3188e9124f081ab7631bcb.jpg"
+            alt="Driveway Paving"
+            class="service-image"
+          />
+          <h3>Driveway Paving</h3>
+          <p>
+            Install or repair driveways for improved curb appeal and durability.
+          </p>
+          <p class="service-cost">$800</p>
+          <span class="eco-tag eco-friendly">Eco-Friendly</span>
+        </div>
+
+        <div
+          class="service-card"
+          data-title="Home Inspection"
+          onclick="openModal('Home Inspection')"
+        >
+          <img
+            src="https://i.pinimg.com/474x/35/13/38/351338f06f243769c1327d8a9867ba53.jpg"
+            alt="Home Inspection"
+            class="service-image"
+          />
+          <h3>Home Inspection</h3>
+          <p>
+            Comprehensive home inspections to ensure safety and condition of the
+            property.
+          </p>
+          <p class="service-cost">$400</p>
+          <span class="eco-tag not-eco-friendly">Not Eco-Friendly</span>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 My Services. All Rights Reserved.</p>
+      </footer>
+    </div>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <h3 style = "padding-right: 220px;">
+          Home Repair
+        </h3>
+        <div style = "padding-right: 175px;">
+          Compressor fan motor
+          <br>
+        </div>
+        <div class="slider_mod"> 
+          <div class="slides_mod">
+            <div class="slide_mod"><img src="assets/images/home-cleaning.jpg" alt="Image 1" /></div>
+            <div class="slide_mod"><img src="assets/images/air-conditioner-repair.jpg" alt="Image 2" /></div>
+            <div class="slide_mod"><img src="assets/images/air-conditioner-repair-service-ad-template-design-a69eed1087a40e49cb6517fc0245d23c_screen.jpg" alt="Image 3" /></div>
+          </div>
+          <button class="prev_mod" onclick="plusSlidesMod(-1)">&#10094;</button>
+          <button class="next_mod" onclick="plusSlidesMod(1)">&#10095;</button>
+        </div>
+        <h5>$500</h5>
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="serviceTitle"></h2>
+        <p>Would you like to fix it now or schedule it for later?</p>
+        
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="serviceTitle"></h2>
+        <p id="serviceDescription"></p>
+        <p id="serviceCost"></p>
+        <p id="ecoTag"></p>
+        <button onclick="fixItNow()">Fix It Now</button>
+        <button onclick="scheduleLater()">Schedule Later</button>
+      </div>
+    </div>
+
+    <script>
+      // Function to filter services
+      function filterServices() {
+        const searchInput = document
+          .getElementById("searchBar")
+          .value.toLowerCase();
+        const services = document.querySelectorAll(".service-card");
+
+        services.forEach((service) => {
+          const title = service.getAttribute("data-title").toLowerCase();
+          if (title.includes(searchInput)) {
+            service.style.display = "block";
+          } else {
+            service.style.display = "none";
+          }
+        });
+      }
+
+      // Function to open and close the sidebar
+
+      // Function to handle modal
+      function openModal(title, description, cost, ecoTag) {
+        document.getElementById("serviceTitle").innerText = title;
+        document.getElementById("serviceDescription").innerText = description;
+        document.getElementById("serviceCost").innerText = cost;
+        document.getElementById("ecoTag").innerText =
+          ecoTag === "eco-friendly" ? "Eco-Friendly" : "Not Eco-Friendly";
+        document.getElementById("serviceModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("serviceModal").style.display = "none";
+      }
+
+      function fixItNow() {
+        // Handle 'Fix It Now' action
+        alert("Service will be fixed now.");
+      }
+
+      function scheduleLater() {
+        // Handle 'Schedule Later' action
+        alert("Service has been scheduled.");
+      }
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>
